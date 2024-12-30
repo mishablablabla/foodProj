@@ -221,4 +221,18 @@ window.addEventListener("DOMContentLoaded", () => {
     ".menu .container",
     "menu__item"
   ).render();
+
+  // Forms
+
+  const form = document.querySelectorAll("form");
+
+  function postData(form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const request = new XMLHttpRequest();
+
+      request.open("POST", "server.php");
+    });
+  }
 });
